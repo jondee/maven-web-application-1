@@ -118,16 +118,17 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
+				 <artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler.version}</version>
+				<!--<version>3.3</version> -->
 				<configuration>
 					<verbose>true</verbose>
                                         <fork>true</fork>
                                         <executable>${java.home}</executable>
                                         <compilerVersion>1.8</compilerVersion>
 					<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 
