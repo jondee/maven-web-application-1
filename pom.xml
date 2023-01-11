@@ -106,7 +106,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://92.168.108.140:8081/repository/facebook-snapshot/</url>
+	      <url>http://192.168.108.140:8081/repository/facebook-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
@@ -119,8 +119,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
+				<version>3.8.2</version>
 				<configuration>
+					<verbose>true</verbose>
+                                        <fork>true</fork>
+                                        <executable>${java.home}</executable>
+                                        <compilerVersion>1.8</compilerVersion>
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
 				</configuration>
